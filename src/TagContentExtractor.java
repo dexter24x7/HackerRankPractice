@@ -10,7 +10,7 @@ import java.util.regex.*;
                 String line = in.nextLine();
                 //Write your code here
                 int flag=0;
-                Pattern pat = Pattern.compile("<(.+)>((?:\\w|\\s|\\W&&[^<>])+)</\\1>");
+                Pattern pat = Pattern.compile("<(.+)>([^<>]+)</\\1>");
                 Matcher mat = pat.matcher(line);
                 while(mat.find()) {
                     System.out.println(mat.group(2));
